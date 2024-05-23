@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visit Cards</title>
+</head>
+<body>
+
+<script>
+    // Запит особистих даних користувача
+    var name = prompt('Input name', '');
+    var position = prompt('Input position', '');
+    var phone = prompt('Input phone', '');
+
+    // Створення візитної картки
+    var visitcard = '<TABLE width="100%" border="0">'
+        + ' <TR>'
+        + ' <TD align="CENTER" valign="CENTER">'
+        + ' <IMG src="cat.jpg" height=40 width=40>'
+        + ' </TD>'
+        + ' <TD align="CENTER">'
+        + ' <B>' + name + '</B><BR>'
+        + ' <I>' + position + '</I><BR>'
+        + ' <FONT color="blue">' + phone + '</FONT>'
+        + ' </TD>'
+        + ' </TR>'
+        + ' </TABLE>';
+
+    // Формування таблиці 12x3 з візитними картками
+    document.write('<TABLE width="100%" border="0" align="CENTER">');
+    for (var y = 0; y < 12; y++) {
+        document.write('<TR>');
+        for (var x = 0; x < 3; x++) {
+            document.write('<TD align="CENTER" style="border-style: dashed; border-width: thin;">');
+            document.write(visitcard);
+            document.write('</TD>');
+        }
+        document.write('</TR>');
+    }
+    document.write('</TABLE>');
+</script>
+
+</body>
+</html>
